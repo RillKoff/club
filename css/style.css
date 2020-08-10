@@ -1,0 +1,484 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  transition-duration: .3s;
+}
+
+.headerNav{
+  width: 100%;
+  background-color: #333;
+}
+
+.headerNav a{
+  color: white;
+}
+
+.headerNavPosition{
+  width: 85%;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerNav_nav li{
+  display: flex;
+  list-style: none;
+  color: white;
+  padding-top: 50px;
+}
+
+.headerNav_nav li ul{
+  padding-left: 40px;
+}
+
+.headerNav_logo{
+  margin: 10px 0;
+  height: 100px;
+  width: 100px;
+  background: url('../img/logo.png');
+  background-position: center;
+  background-size: cover;
+}
+
+
+.headerNav_calendar{
+  margin-top: 40px;
+  padding: 5px 10px 0 35px;
+  height: 30px;
+  background-color: #f33341;
+  border: 1px solid #f33341;
+  border-radius: 5px;
+  color: #c4c4c4;
+  position: relative;
+}
+
+.headerNav_calendar:hover{
+  box-shadow: 0px 0px 25px 1px #f33341;
+}
+
+.headerNav_calendar img{
+  padding-right: 15px;
+  position: absolute;
+  left: 5px;
+  top: 7px;
+}
+
+/*                Слайдер            */
+
+.sliderWrap{
+  width: 100%;
+  height: 70vh;
+  background-color: #c4c4c4;
+  position: relative;
+}
+
+.sliderWrap li{
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  list-style: none;
+}
+
+.sliderWrap li ul{
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: .3s;
+}
+
+.slide{
+  opacity: 0;
+}
+
+.current{
+  opacity: 1;
+}
+
+.slide:nth-of-type(1) {
+    background: url('../img/slide1.png');
+    background-position: center;
+    background-size: cover;
+}
+.slide:nth-of-type(2) {
+    background: orange;
+}
+.slide:nth-of-type(3) {
+    background: green;
+}
+.slide:nth-of-type(4) {
+    background: blue;
+}
+.slide:nth-of-type(5) {
+    background: purple;
+}
+
+.next{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.previus{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.about_us_wrap{
+  width: 100%;
+  margin-top: 200px;
+}
+
+.about_us_pos{
+  width: 75%;
+  min-height: 300px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about_us_photo{
+  width: 35%;
+  background: url('../img/about_us.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.about_us_info{
+  width: 50%;
+}
+
+.about_us_info h1{
+  padding-bottom: 40px;
+  font-size: 30px;
+}
+
+.about_us_info p:nth-of-type(1){
+  font-size: 11px;
+  color: #4870b4;
+}
+
+.about_us_info p:nth-of-type(2){
+  padding-bottom: 30px;
+  font-size: 14px;
+}
+
+.about_us_info a{
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px;
+  height: 30px;
+  background-color: #f33341;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.about_us_info a:hover{
+  box-shadow: 0px 0px 25px 1px #f33341;
+}
+
+
+.actual_heading{
+  margin-top: 80px;
+  margin-bottom: 70px;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+.competition_wrap{
+  width: 100%;
+}
+
+.competition_pos{
+  width: 75%;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.competition_main{
+  width: 45%;
+  max-height: 350px;
+  background: url('../img/competition.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.competition_main_dark{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.competition_main_pos{
+  width: 75%;
+  margin: 0 auto;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+
+.competition_main_pos h3{
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.competition_main_pos p{
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.competition_main_dateAndButton p{
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.competition_main_dateAndButton a{
+  font-size: 14px;
+  padding: 10px 15px;
+  height: 20px;
+  background-color: #f33341;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.competition_main_dateAndButton a:hover{
+  box-shadow: 0px 0px 25px 1px #f33341;
+}
+
+.competition_main_dateAndButton{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.competition_second{
+  width: 20%;
+  min-height: 350px;
+  position: relative;
+}
+
+.competition_second:hover{
+  box-shadow: 0px 10px 25px 0px #000000;
+}
+
+.competition_second_photo{
+  width: 100%;
+  background: url('../img/competition.png');
+  background-position: center;
+  background-size: cover;
+  min-height: 45%;
+}
+
+.competition_second_pos{
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.competition_second_pos h3{
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.competition_second_pos p{
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.competition_second_dateAndButton{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 14px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+}
+
+.competition_second_dateAndButton p{
+  padding-top: 5px;
+  margin-left: 10px;
+  font-size: 12px;
+  color: #4870b4;
+}
+
+.competition_second_dateAndButton a{
+  color: white;
+  padding: 5px;
+  height: 20px;
+  background-color: #f33341;
+  border-radius: 5px;
+}
+
+.competition_second_dateAndButton a:hover{
+  box-shadow: 0px 0px 25px 1px #f33341;
+}
+
+.buttons{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.buttons a{
+  color: white;
+  padding: 15px;
+  background-color: #f33341;
+  border-radius: 5px;
+}
+
+.archive a{
+  padding: 10px 50px;
+}
+
+.buttons a:hover, .archive a:hover{
+  box-shadow: 0px 0px 25px 1px #f33341;
+}
+
+.events_heading{
+  margin-top: 60px;
+  text-align: center;
+  font-size: 30px;
+  color: #333333;
+}
+
+.events_wrap{
+  width: 100%;
+  margin-top: 50px;
+}
+
+.events_pos{
+  width: 75%;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.events_block{
+  width: 30%;
+}
+
+.events_block:hover{
+  box-shadow: 0px 5px 25px 0px #000000;
+}
+
+.events_photo{
+  width: 100%;
+  height: 250px;
+  background: url('../img/about_us.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.events_block_pos{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.events_block h3{
+  color: #333333;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.events_block p:nth-of-type(1){
+  font-size: 13px;
+  margin-top: 20px;
+  color: #666666;
+}
+
+.events_block p:nth-of-type(2){
+  font-size: 12px;
+  color: #4870b4;
+  margin: 30px 20px;
+  float: right;
+}
+
+.some_text_onBottom{
+  color: #666666;
+  font-size: 14px;
+  width: 75%;
+  margin: 50px auto 0 auto;
+}
+
+.sponsors_wrap{
+  width: 100%;
+  height: 130px;
+  background-color: #454545;
+  margin: 70px auto 0 auto;
+}
+
+.footer_wrap{
+  width: 100%;
+  background-color: #333;
+}
+
+.footer_pos{
+  width: 75%;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_cr{
+  color: #666;
+}
+
+.footer_icons ul{
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_icons li{
+  padding-right: 40px;
+}
+
+.footer_icons ul a{
+  color: white;
+}
+
+.footer_icons ul a:hover{
+  color: #f33341;
+}
+
+.footer_icons ul a{
+  font-size: 25px;
+}
+
+.footer_private a{
+  color: #666;
+}
