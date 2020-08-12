@@ -2,7 +2,7 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/4a37b24458.js" crossorigin="anonymous"></script>    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <title>Клуб единоборств</title>
   </head>
@@ -13,15 +13,24 @@
           <div class="headerNav_logo">
           </div>
           <div class="headerNav_nav">
-            <li>
-              <ul><a href="#">Главная</a></ul>
-              <ul><a href="#">Руководство</a></ul>
-              <ul><a href="#">События</a></ul>
-              <ul><a href="#">Документы</a></ul>
-              <ul><a href="#">Контакты</a></ul>
-            </li>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="manage.html">Руководство</a></li>
+              <li class="outer"><a href="#">События &darr;</a>
+                <ul class="inner">
+                   <li><a href="#">События &darr;</a></li>
+                	 <li><a href="archive2020.html">Архив 2020</a></li>
+                	 <li><a href="archive2019.html">Архив 2019</a></li>
+                	 <li><a href="archive2018.html">Архив 2018</a></li>
+                   <li><a href="archive2017.html">Архив 2017</a></li>
+                	 <li><a href="archive2016.html">Архив 2016</a></li>
+                 </ul>
+              </li>
+              <li><a href="documents.html">Документы</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
           </div>
-            <a href="#" class="headerNav_calendar"><img src="img/calendar.png" alt="">Календарь соревнований</a>
+            <a href="#" class="headerNav_calendar"><img src="../img/calendar.png" alt="">Календарь соревнований</a>
         </div>
       </div>
     </div>
@@ -195,19 +204,19 @@
       <div class="footer_pos">
         <div class="footer_cr">©2020 Все права защищены</div>
         <div class="footer_icons">
-          <ul>
-            <li><a href="#">  <i class="fab fa-vk"></i>  </a></li>
-            <li><a href="#">  <i class="fab fa-youtube"></i>  </a></li>
-            <li><a href="#">  <i class="fab fa-twitter"></i>  </a></li>
-            <li><a href="#">  <i class="fab fa-facebook-f"></i>  </a></li>
-            <li><a href="#">  <i class="fab fa-instagram"></i>  </a></li>
-          </ul>
+          <li>
+            <ul><a href="#">  <i class="fab fa-vk"></i>  </a></ul>
+            <ul><a href="#">  <i class="fab fa-youtube"></i>  </a></ul>
+            <ul><a href="#">  <i class="fab fa-twitter"></i>  </a></ul>
+            <ul><a href="#">  <i class="fab fa-facebook-f"></i>  </a></ul>
+            <ul><a href="#">  <i class="fab fa-instagram"></i>  </a></ul>
+          </li>
       </div>
       <div class="footer_private"><a href="#">Политика конфиденциальности</a></div>
     </div>
 
 
-<script type="text/javascript" src="js/script.js">
+<script type="text/javascript" src="../js/script.js">
 
 </script>
   </body>
