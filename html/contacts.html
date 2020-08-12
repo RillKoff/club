@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"  href="../css/style.css">
+    <script src="https://kit.fontawesome.com/4a37b24458.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Клуб единоборств</title>
+  </head>
+  <body>
+
+    <div class="headerWrapper">
+      <div class="headerNav">
+        <div class="headerNavPosition">
+          <div class="headerNav_logo">
+          </div>
+          <div class="headerNav_nav">
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="manage.html">Руководство</a></li>
+              <li class="outer"><a href="#">События &darr;</a>
+                <ul class="inner">
+                   <li><a href="#">События &darr;</a></li>
+                   <li><a href="archive2020.html">Архив 2020</a></li>
+                   <li><a href="archive2019.html">Архив 2019</a></li>
+                   <li><a href="archive2018.html">Архив 2018</a></li>
+                   <li><a href="archive2017.html">Архив 2017</a></li>
+                   <li><a href="archive2016.html">Архив 2016</a></li>
+                 </ul>
+              </li>
+              <li><a href="documents.html">Документы</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+            <a href="#" class="headerNav_calendar"><img src="../img/calendar.png" alt="">Календарь соревнований</a>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="contacts_heading">Контакты</h1>
+
+    <div class="contacts_icons_wrap">
+      <div class="contacts_icons_pos">
+        <div class="contacts_icons_block">
+          <i class="fa fa-mobile"></i>
+          <p>Телефон</p>
+          <p>+7 (000) 000-00-00</p>
+        </div>
+        <div class="contacts_icons_block">
+          <i class="fa fa-envelope-o"></i>
+          <p>E-mail</p>
+          <p>mail@info.com</p>
+        </div>
+        <div class="contacts_icons_block">
+          <i class="fa fa-map-marker"></i>
+          <p>Адрecc</p>
+          <p>Г. Город, ул. Улица, д. дом</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contacts_form_wrap">
+      <div class="contacts_form_pos">
+        <div class="contacts_form_block">
+          <div class="contacts_form_photo"></div>
+          <div class="contacts_form_form">
+            <form class="" action="../php/mail.php" method="POST" id="forma">
+              <input type="text" name="person_name" value="" placeholder="Ваше имя...">
+              <input type="text" name="person_phone" value="" placeholder="Ваш телефон...">
+              <input type="text" name="person_mail" value="" placeholder="Ваш E-mail...">
+              <button type="submit" name="button">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sponsors_wrap">
+      <div class="sponsors_pos">
+      </div>
+    </div>
+    <div class="footer_wrap">
+      <div class="footer_pos">
+        <div class="footer_cr">©2020 Все права защищены</div>
+        <div class="footer_icons">
+          <li>
+            <ul><a href="#">  <i class="fab fa-vk"></i>  </a></ul>
+            <ul><a href="#">  <i class="fab fa-youtube"></i>  </a></ul>
+            <ul><a href="#">  <i class="fab fa-twitter"></i>  </a></ul>
+            <ul><a href="#">  <i class="fab fa-facebook-f"></i>  </a></ul>
+            <ul><a href="#">  <i class="fab fa-instagram"></i>  </a></ul>
+          </li>
+      </div>
+      <div class="footer_private"><a href="#">Политика конфиденциальности</a></div>
+    </div>
+
+  </body>
+</html>
