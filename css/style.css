@@ -6,6 +6,48 @@
   transition-duration: .3s;
 }
 
+.main_popup_hide{
+  display: none;
+}
+
+.main_popup{
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background-color: #2b2b2b;
+}
+
+.main_popup li{
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+  color: white;
+}
+
+.main_popup li ul{
+  cursor: pointer;
+  color: white;
+  font-size: calc(40px + 16 * ((100vw - 120px) / (1280 - 320)));
+}
+
+.main_popup a{
+  color: white;
+}
+
+.main_popup li ul:first-of-type{
+  text-decoration: underline;
+}
+
+.main_popup li ul:hover{
+  background-color: #4870b4;
+}
+
 .headerNav{
   width: 100%;
   background-color: #333;
@@ -24,20 +66,81 @@
   justify-content: space-around;
 }
 
+.headerNav_nav{
+  width: 40%;
+}
+
+.headerNav_hide_menu{
+  width: 80px;
+  display: none;
+  color: white;
+  font-size: 25px;
+  margin: 45px auto 0 auto;
+  padding-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+}
+
+
 .headerNav_nav ul{
   display: flex;
+  justify-content: space-between;
   list-style: none;
   color: white;
   padding-top: 50px;
 }
 
 .headerNav_nav ul li{
-  padding-left: 40px;
   position: relative;
+  margin-right: 20px;
+}
+
+.inner{
+  max-height: 20px;
+}
+
+.headerNav_nav ul li a:hover{
+  color: #f33341;
+}
+
+
+.headerNav_nav ul ul li{
+  padding: 15px 15px 15px 15px;
+  background: #4870b4;
+}
+
+.headerNav_nav ul ul li:nth-of-type(1){
+  padding-top: 15px;
+}
+
+.headerNav_nav ul ul li:last-of-type{
+  border-bottom: 5px;
+}
+
+.headerNav_nav ul ul{
+  border-radius: 5px;
+  display: none;
+  position: absolute;
+  right: -36px;
+  top: -10px;
+  padding: 0;
+  z-index: 150;
+}
+
+.headerNav_nav ul ul li:first-of-type a{
+  border-top: 1px solid #4870b4;
+}
+
+.headerNav_nav ul ul li:last-of-type a{
+  border-bottom: 1px solid #4870b4;
+}
+.outer:hover > .inner, .inner:hover{
+  display: list-item;
 }
 
 .headerNav_logo{
-  margin: 10px 0;
+  margin: 10px 0 0 30px;
   height: 100px;
   width: 100px;
   background: url('../img/logo.png');
@@ -47,7 +150,7 @@
 
 
 .headerNav_calendar{
-  margin-top: 40px;
+  margin: 40px 30px 0 30px;
   padding: 5px 10px 0 35px;
   height: 30px;
   background-color: #f33341;
@@ -69,32 +172,20 @@
 }
 
 
-.headerNav_nav ul ul li{
-  padding: 15px 15px 15px 15px;
-  background: #4870b4;
+@media (max-width: 1440px) {
+  .headerNavPosition{
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
-.headerNav_nav ul ul li:nth-of-type(1){
-  padding-top: 15px;
-}
-
-.headerNav_nav ul ul li:last-of-type{
-  border-bottom: 5px;
-}
-
-.headerNav_nav ul ul{
-  border-radius: 5px;
-  border: 1px solid #4870b4;
-  display: none;
-  position: absolute;
-  right: -17px;
-  top: -16px;
-  padding: 0;
-  z-index: 150;
-}
-
-.outer:hover > .inner, .inner:hover{
-  display: list-item;
+@media screen and (max-width: 980px) {
+  .headerNav_hide_menu{
+    display: block;
+  }
+  .headerNav_nav ul{
+    display: none;
+  }
 }
 
 /*                Слайдер            */
@@ -155,9 +246,32 @@
   right: 0;
   width: 10%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
+
+.next:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.next i{
+  opacity: 0.6;
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  left: 30px;
+  top: 300px;
+}
+
+.next img{
+  color: white;
+  position: absolute;
+  left: 30px;
+  top: 43%;
+  width: 70px;
+  height: 70px;
+}
+
 
 .previus{
   z-index: 9999;
@@ -166,8 +280,27 @@
   left: 0;
   width: 10%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+}
+
+.previus:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.previus img{
+  width: 70px;
+  height: 70px;
+  color: white;
+  position: absolute;
+  right: 30px;
+  top: 43%;
+}
+
+
+.previus:hover > i{
+  opacity: 1;
 }
 
 .about_us_wrap{
@@ -183,13 +316,17 @@
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .about_us_photo{
   width: 35%;
+  height: 310px;
+  min-width: 430px;
   background: url('../img/about_us.png');
   background-position: center;
   background-size: cover;
+  margin-right: 25px;
 }
 
 .about_us_info{
@@ -227,6 +364,26 @@
 }
 
 
+@media (max-width: 1214px) {
+  .about_us_info h1{
+    padding-bottom: 15px;
+  }
+  .about_us_photo,.about_us_info{
+    margin: 0 auto;
+  }
+  .about_us_photo{
+    width: 100%;
+    height: 500px;
+  }
+  .about_us_info{
+    width: 100%;
+  }
+  .about_us_info a{
+    margin: 20px auto 0 auto;
+    border-radius: 15px;
+  }
+}
+
 .actual_heading{
   margin-top: 80px;
   margin-bottom: 70px;
@@ -247,11 +404,12 @@
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .competition_main{
   width: 45%;
-  max-height: 350px;
+  min-height: 350px;
   background: url('../img/competition.png');
   background-position: center;
   background-size: cover;
@@ -316,7 +474,7 @@
 }
 
 .competition_second:hover{
-  box-shadow: 0px 10px 25px 0px #000000;
+  box-shadow: 0px 10px 25px -20px rgb(0, 0, 0, 0.8);
 }
 
 .competition_second_photo{
@@ -345,14 +503,13 @@
 
 .competition_second_dateAndButton{
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   font-size: 14px;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  bottom: 20px;
+
 }
 
 .competition_second_dateAndButton p{
@@ -372,6 +529,17 @@
 
 .competition_second_dateAndButton a:hover{
   box-shadow: 0px 0px 25px 1px #f33341;
+}
+
+@media (max-width: 1440px) {
+  .competition_main{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .competition_second{
+    width: 40%;
+    margin-top: 50px;
+  }
 }
 
 .buttons{
@@ -420,7 +588,7 @@
 }
 
 .events_block:hover{
-  box-shadow: 0px 5px 25px 0px #000000;
+  box-shadow: 0px 10px 25px -20px rgb(0, 0, 0, 0.8);
 }
 
 .events_photo{
@@ -453,6 +621,15 @@
   color: #4870b4;
   margin: 30px 20px;
   float: right;
+}
+
+@media (max-width: 1440px) {
+  .events_block:nth-of-type(3){
+    display: none;
+  }
+  .events_block{
+    width: 40%;
+  }
 }
 
 .some_text_onBottom{
@@ -567,23 +744,40 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
 }
 
 .photos_small{
   background-color: #4870b4;
   border-radius: 10px;
   height: 300px;
-  min-width: 23%;
-  max-width: 23%;
+  width: 23%;
+  min-width: 230px;
   margin-bottom: 40px;
   position: relative;
+}
+
+@media (max-width: 1024px) {
+  .photos_small{
+    width: 45%;
+  }
+}
+
+.photos_show{
+  position: fixed;
+  max-width: 900px;
+  width: 900px;
+  height: 600px;
+  top: 150px;
+  left: 500px;
+  z-index: 10;
 }
 
 .photos_small_opacity{
   display: none;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.40);
   border-radius: 10px;
 }
 
@@ -612,7 +806,6 @@
 }
 
 .popup{
-  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -620,13 +813,10 @@
   z-index: 9;
 }
 
-.popup_photo{
-  width: 50%;
-  height: 50%;
-  margin: 15% auto;
-  background-color: #f33341;
-  border-radius: 10px;
+.popup_hide{
+  display: none;
 }
+
 
 .popup_close1{
   cursor: pointer;
@@ -674,6 +864,7 @@
 .manage_block{
   margin-bottom: 50px;
   width: 45%;
+  min-width: 520px;
   height: 200px;
   display: -webkit-flex;
   display: -ms-flex;
@@ -683,18 +874,24 @@
   transition-duration: 3s;
 }
 
+@media (max-width: 1300px) {
+  .manage_block{
+    margin: 0 auto 50px auto;
+  }
+}
+
 .manage_block_photo{
-  background-color: #4870b4;
+  background-color: #f33341;
   border-radius: 10px;
   height: 100%;
-  width: 30%;
+  width: 200px;
   z-index: 9999;
 }
 
 .manage_block_photo_rotate{
-  width: 30%;
+  width: 200px;
   height: 100%;
-  background-color: #f33341;
+  background-color: #4870b4;
   border-radius: 10px;
   position: absolute;
   transition-duration: .5s;
@@ -718,10 +915,15 @@
   font-size: 16px;
 }
 
+
+/** ----------------Контакты ----------------------- **/
+
+
 .contacts_heading{
   text-align: center;
   margin: 60px auto;
 }
+
 
 .contacts_icons_wrap{
   width: 100%;
@@ -756,7 +958,7 @@
 
 .contacts_form_wrap{
   width: 100%;
-  margin-top: 60px;
+  margin-top: 130px;
 }
 
 .contacts_form_pos{
@@ -788,6 +990,13 @@
   width: 50%;
   height: 100%;
   float: right;
+  position: relative;
+}
+
+.contacts_form_form:after {
+  content: " ";
+  clear: both;
+  display: table;
 }
 
 .contacts_form_form form{
@@ -802,18 +1011,50 @@
   height: 50px;
   border-radius: 5px;
   border: none;
+  font-size: 14px;
+  padding-left: 50px;
+  box-shadow: inset 0px 0px 10px 0px #666;
 }
 
 .contacts_form_form button{
-  height: 30px;
-  width: 80px;
+  height: 40px;
+  width: 190px;
+  border: none;
+  border-radius: 5px;
   margin-top: 30px;
+  margin-right: 20px;
+  color: #4870b4;
 }
 
-::-webkit-input-placeholder {color:#666;  font-size: 14px; padding-left: 50px;}
-::-moz-placeholder          {color:#666;  font-size: 14px; padding-left: 50px;}
-:-moz-placeholder           {color:#666;  font-size: 14px; padding-left: 50px;}
-:-ms-input-placeholder      {color:#666;  font-size: 14px; padding-left: 50px;}
+.contacts_form_form button:hover{
+    box-shadow: 0px 0px 10px 0px white;
+}
+
+.contacts_form_form_private{
+  position: absolute;
+  right: 90px;
+  bottom: 35px;
+  font-size: 10px;
+  color: white;
+  width: 200px;
+}
+
+@media (max-width: 1440px) {
+  .contacts_form_form_private{
+    right: 10px;
+    width: 150px;
+  }
+}
+
+.contacts_form_form_private a{
+  color: white;
+  text-decoration: underline;
+}
+
+::-webkit-input-placeholder {color:#666;  font-size: 14px;}
+::-moz-placeholder          {color:#666;  font-size: 14px;}
+:-moz-placeholder           {color:#666;  font-size: 14px;}
+:-ms-input-placeholder      {color:#666;  font-size: 14px;}
 
 .archive_headingSelect{
   text-align: center;
@@ -870,4 +1111,52 @@
 .archive_block_text h3{
   margin-bottom: 10px;
   font-size: 16px;
+}
+
+/**-------------Календарь ---------------------------- **/
+.calendar_heading{
+  text-align: center;
+  margin: 80px auto;
+  font-size: 30px;
+}
+
+.calendar_wrap{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.calendar_block{
+  width: 100%;
+}
+
+.calendar_line{
+  width: 100%;
+  height: 45px;
+  margin-bottom: 40px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+}
+
+.calendar_line:hover{
+  box-shadow: 0px 10px 25px -20px rgb(0, 0, 0, 1);
+}
+
+.calendar_line p{
+  font-size: 16px;
+}
+
+.calendar_btn{
+  width: 240px;
+  height: 30px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #4870b4;
+  color: white;
+  border-radius: 5px;
+}
+
+.calendar_btn:hover{
+  box-shadow: 0px 1px 10px 0px #4870b4;
 }
