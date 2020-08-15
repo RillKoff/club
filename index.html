@@ -3,35 +3,47 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/4a37b24458.js" crossorigin="anonymous"></script>
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4a37b24458.js" crossorigin="anonymous"></script>    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <title>Клуб единоборств</title>
   </head>
   <body>
+    <div class="main_popup main_popup_hide">
+      <li>
+        <ul class="close">Закрыть</ul>
+        <ul><a href="#">Главная</a></ul>
+        <ul><a href="#">Руководство</a></ul>
+        <ul><a href="#">События</a></ul>
+        <ul><a href="#">Документы</a></ul>
+        <ul><a href="#">Контакты</a></ul>
+      </li>
+    </div>
     <div class="headerWrapper">
       <div class="headerNav">
         <div class="headerNavPosition">
           <div class="headerNav_logo">
           </div>
           <div class="headerNav_nav">
+            <div class="headerNav_hide_menu">
+              <p class="headerNav_hide_menu_btn">Меню</p>
+            </div>
             <ul>
-              <li><a href="html/index.html">Главная</a></li>
+              <li><a href="index.html">Главная</a></li>
               <li><a href="html/manage.html">Руководство</a></li>
               <li class="outer"><a href="#">События &darr;</a>
                 <ul class="inner">
-                   <li><a href="#">События &darr;</a></li>
-                	 <li><a href="html/archive2020.html">Архив 2020</a></li>
-                	 <li><a href="html/archive2019.html">Архив 2019</a></li>
-                	 <li><a href="html/archive2018.html">Архив 2018</a></li>
+                   <li><a href="#">События</a></li>
+                   <li><a href="html/archive2020.html">Архив 2020</a></li>
+                   <li><a href="html/archive2019.html">Архив 2019</a></li>
+                   <li><a href="html/archive2018.html">Архив 2018</a></li>
                    <li><a href="html/archive2017.html">Архив 2017</a></li>
-                	 <li><a href="html/archive2016.html">Архив 2016</a></li>
+                   <li><a href="html/archive2016.html">Архив 2016</a></li>
                  </ul>
               </li>
               <li><a href="html/documents.html">Документы</a></li>
               <li><a href="html/contacts.html">Контакты</a></li>
             </ul>
           </div>
-            <a href="#" class="headerNav_calendar"><img src="img/calendar.png" alt="">Календарь соревнований</a>
+            <a href="html/calendar.html" class="headerNav_calendar"><img src="img/calendar.png" alt="">Календарь соревнований</a>
         </div>
       </div>
     </div>
@@ -45,15 +57,17 @@
         <ul class="slide"></ul>
       </li>
         <div class="next">
+          <!--<i class="fas fa-arrow-right"></i>-->
+          <img src="img/arrow_right.svg" alt="">
         </div>
         <div class="previus">
+          <img src="img/arrow_left.svg" alt="">
         </div>
     </div>
     <!-- Блок о нас -->
     <div class="about_us_wrap">
       <div class="about_us_pos">
         <div class="about_us_photo">
-
         </div>
         <div class="about_us_info">
           <p>Московская область</p>
@@ -70,7 +84,7 @@
              officia libero laboriosam vitae hic dolorem minus voluptate,
              alias doloribus dolor. Magnam, laborum, saepe? Quisquam et
              possimus in repellendus laudantium provident accusamus labore.</p>
-          <a href="#">Наш руководящий состав</a>
+          <a href="html/manage.html">Наш руководящий состав</a>
         </div>
       </div>
     </div>
@@ -173,7 +187,7 @@
       </div>
     </div>
 
-    <div class="buttons archive"><a href="#">Архив событий</a></div>
+    <div class="buttons archive"><a href="html/archive2020.html">Архив событий</a></div>
 
     <div class="some_text_onBottom">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut libero
@@ -220,5 +234,8 @@
 <script type="text/javascript" src="js/script.js">
 
 </script>
+
+<script src="js/main_popup.js" charset="utf-8"></script>
+
   </body>
 </html>
