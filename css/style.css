@@ -686,6 +686,9 @@
   .events_block{
     width: 45%;
   }
+  .buttons a{
+    border-radius: 10px;
+  }
 }
 @media (max-width: 980px){
   .events_block h3{
@@ -945,6 +948,7 @@
 @media (max-width: 1300px) {
   .manage_block{
     margin: 0 auto 50px auto;
+    width: 100%;
   }
 }
 
@@ -983,6 +987,20 @@
   font-size: 16px;
 }
 
+@media (max-width: 980px) {
+  .manage_block_text p:nth-of-type(1){
+    font-size: 19px;
+  }
+  .manage_block_text h3{
+    font-size: 25px;
+  }
+  .manage_block_text p:nth-of-type(2){
+    font-size: 23px
+  }
+  .manage_block_text{
+    width: 70%;
+  }
+}
 
 /** ----------------Контакты ----------------------- **/
 
