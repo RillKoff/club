@@ -17,7 +17,7 @@
           </div>
           <div class="headerNav_nav">
             <ul>
-              <li><a href="index.html">Главная</a></li>
+              <li><a href="../index.html">Главная</a></li>
               <li><a href="manage.html">Руководство</a></li>
               <li class="outer"><a href="#">События &darr;</a>
                 <ul class="inner">
@@ -33,7 +33,7 @@
               <li><a href="contacts.html">Контакты</a></li>
             </ul>
           </div>
-            <a href="#" class="headerNav_calendar"><img src="../img/calendar.png" alt="">Календарь соревнований</a>
+            <a href="calendar.html" class="headerNav_calendar"><img src="../img/calendar.png" alt="">Календарь соревнований</a>
         </div>
       </div>
     </div>
@@ -66,11 +66,14 @@
           <div class="contacts_form_photo"></div>
           <div class="contacts_form_form">
             <form class="" action="../php/mail.php" method="POST" id="forma">
-              <input type="text" name="person_name" value="" placeholder="Ваше имя...">
-              <input type="text" name="person_phone" value="" placeholder="Ваш телефон...">
-              <input type="text" name="person_mail" value="" placeholder="Ваш E-mail...">
+              <input type="text" name="person_name" placeholder="Ваше имя..." required>
+              <input type="text" name="person_phone" placeholder="Ваш телефон..." required>
+              <input type="text" name="person_mail" placeholder="Ваш E-mail..." required>
               <button type="submit" name="button">Отправить</button>
             </form>
+            <div class="contacts_form_form_private">
+              <p>Нажимая на кнопку Вы даете согласие на обработку <a href="#">персональных данных</a></p>
+            </div>
           </div>
         </div>
       </div>
