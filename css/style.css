@@ -730,6 +730,7 @@
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .footer_cr{
@@ -1167,7 +1168,7 @@
 }
 
 .more{
-  height: 350px;
+  height: auto;
 }
 
 .archive_block:hover{
@@ -1201,6 +1202,21 @@
 .archive_block_text h3{
   margin-bottom: 10px;
   font-size: 16px;
+}
+
+@media (max-width: 980px) {
+  .archive_block{
+    width: 95%;
+  }
+  .archive_block_text p:nth-of-type(1){
+    font-size: 19px;
+  }
+  .archive_block_text h3{
+    font-size: 21px;
+  }
+  .archive_block_text p:nth-of-type(2){
+    font-size: 18px;
+  }
 }
 
 /**-------------Календарь ---------------------------- **/
