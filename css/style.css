@@ -546,8 +546,9 @@
     margin: 0 auto;
   }
   .competition_main_dateAndButton a{
-    padding: 15px 25px;
+    padding: 15px 25px 25px 20px;
     border-radius: 10px;
+    font-size: 25px;
   }
   .competition_main_pos{
     top: 25%;
@@ -556,9 +557,6 @@
     font-size: 26px;
   }
   .competition_main_pos p{
-    font-size: 24px;
-  }
-  .competition_main_dateAndButton a{
     font-size: 24px;
   }
   .competition_second{
@@ -574,10 +572,6 @@
   }
   .competition_second_dateAndButton p, .competition_second_dateAndButton a{
     font-size: 17px;
-  }
-  .competition_second_dateAndButton a{
-    padding: 15px 10px;
-    border-radius: 10px;
   }
 }
 
@@ -1265,4 +1259,13 @@
 
 .calendar_btn:hover{
   box-shadow: 0px 1px 10px 0px #4870b4;
+}
+
+@media (max-width: 980px) {
+  .calendar_wrap{
+    width: 95%;
+  }
+  .calendar_line p{
+    margin-right: 20px;
+  }
 }
