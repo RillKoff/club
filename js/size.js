@@ -1,19 +1,20 @@
-var btn = document.querySelectorAll('.size_button')
-var popup = document.querySelector('.popup')
+var btn_click = document.querySelectorAll('.size_button')
+var popup_doc = document.querySelector('.popup')
 var photos = document.querySelectorAll('.photos_small')
 var close1 = document.querySelector('.popup_close1')
 var close2 = document.querySelector('.popup_close2')
 
 
 function photo_popup_show() {
-  popup.classList.toggle('popup_hide')
+  popup_doc.classList.toggle('popup_hide')
   let photo_show = document.querySelector('.photos_show')
   photo_show.classList.toggle('photos_show')
+  
 }
 
-for (let i = 0; i < btn.length; i++){
-    btn[i].addEventListener("click", function() {
-      popup.classList.toggle('popup_hide')
+for (let i = 0; i < btn_click.length; i++){
+    btn_click[i].addEventListener("click", function() {
+      popup_doc.classList.toggle('popup_hide')
       photos[i].classList.toggle('photos_show')
   })
 }

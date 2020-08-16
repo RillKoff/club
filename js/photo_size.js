@@ -1,4 +1,4 @@
-var btn = document.querySelectorAll('.size_button')
+var btn_size = document.querySelectorAll('.size_button')
 var popup = document.querySelector('.popup')
 var photos = document.querySelectorAll('.photos_small')
 var close1 = document.querySelector('.popup_close1')
@@ -11,8 +11,8 @@ function photo_popup_show() {
   photo_show.classList.toggle('photos_show')
 }
 
-for (let i = 0; i < btn.length; i++){
-    btn[i].addEventListener("click", function() {
+for (let i = 0; i < btn_size.length; i++){
+    btn_size[i].addEventListener("click", function() {
       popup.classList.toggle('popup_hide')
       photos[i].classList.toggle('photos_show')
   })
